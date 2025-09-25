@@ -6,7 +6,10 @@ const Footer = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > window.innerHeight - Math.floor(window.innerHeight/3)) {
+      if (
+        window.scrollY >
+        window.innerHeight - Math.floor(window.innerHeight / 3)
+      ) {
         setVisible(true);
       } else {
         setVisible(false);
@@ -15,7 +18,16 @@ const Footer = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
+  const links = [
+    {
+      href: "https://mo-wael.com",
+      text: "© 2025 Mohamed Wael.",
+    },
+    {
+      href: "https://ibrahim-hemdan.com",
+      text: "© 2025 HEMA.",
+    },
+  ];
   return (
     <footer
       className=" text-neon-blue items-center
@@ -41,10 +53,22 @@ const Footer = () => {
           <i className="fa-brands fa-linkedin"></i>
         </a>
       </div>
-      <a href="#">
-        {" "}
-        <p>All rights reserved ©MWE 2025</p>
-      </a>
+      <div className="w-full flex flex-col md:flex-row items-center justify-center gap-2 text-sm text-neutral-400 mt-3">
+        {links.map(({ href, text }) => (
+          <a
+            key={text}
+            href={href}
+            target="_blank"
+            className="relative text-white text-lg font-bold 
+             after:absolute after:left-0 after:-bottom-1 
+             after:h-[2px] after:w-0 after:bg-white 
+             after:transition-all after:duration-500 after:ease-in-out 
+             hover:after:w-full"
+          >
+            {text}
+          </a>
+        ))}
+      </div>
       {visible && (
         <button
           className="logo fixed bottom-4 right-4 bg-[#9b59b6]  text-white px-3 py-3 rounded-full hover:bg-[#a66bbe] transition "

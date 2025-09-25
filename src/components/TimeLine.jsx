@@ -10,8 +10,6 @@ import { historyData } from "../const/timeLine";
 const HistoryTimeline = () => {
   return (
     <div className="p-5 ">
-      
-
       <VerticalTimeline>
         {historyData.map((period, index) => (
           <VerticalTimelineElement
@@ -37,8 +35,10 @@ const HistoryTimeline = () => {
               className="w-30 h-30 object-cover rounded"
             />
             <div className="ml-4 flex flex-col align-center text-center">
-              <h3 className="text-xl font-bold">{period.title}</h3>
-              <p>{period.shortDescription}</p>
+              <h3 className="text-xl font-bold line-clamp-2">{period.title}</h3>
+              <p className="text-sm mt-2 line-clamp-2">
+                {period.shortDescription}
+              </p>
               <Link
                 to={`/history/${period.id}`}
                 className="mt-2 inline-block px-4 py-2 bg-[#000] text-white rounded hover:bg-[#0f0f0f]  transition duration-500 ease-in-out"
