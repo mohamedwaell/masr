@@ -22,8 +22,8 @@ const App = () => {
     const handleLoad = () => {
       setTimeout(() => {
         setLoading(false);
-        setTimeout(() => setVisible(false), 1000); // optional: fully remove after fade
-      }, 1000);
+        setTimeout(() => setVisible(false), 2000); // optional: fully remove after fade
+      }, 2000);
     };
 
     if (document.readyState === "complete") {
