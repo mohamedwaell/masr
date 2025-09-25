@@ -4,25 +4,25 @@
 body {
   font-family: "Roboto Slab", serif;
 
-  background: url(./bodybg.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background: url(/bodybg.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+
   scroll-behavior: smooth;
-  
 }
 nav a,
 button {
   cursor: pointer;
 }
-tml, body {
-  -ms-overflow-style: none; 
-  scrollbar-width: none;    
+tml,
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
-  display: none;           
+  display: none;
 }
 
 /* Hide scrollbars for all elements */
