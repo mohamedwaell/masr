@@ -22,8 +22,9 @@ const sections = [
   },
   {
     title: "Mohamed Wael",
-    text: "Hi, I'm Mohamed Wael Ellakany, a computer science student at Damanhur University, living in Damanhour. I have a strong passion for technology, with skills in front-end web development and C++. I'm always eager to learn new technologies and build creative, user-friendly projects.",
+=    text: "Hi, I'm Mohamed Wael Ellakany, a computer science student at Damanhur University, living in Damanhour. I have a strong passion for technology, with skills in front-end web development and C++. I'm always eager to learn new technologies and build creative, user-friendly projects.",
     images: ["/about/mo wael.jpg", "/about/mowael2.jpg"],
+
   },
   {
     title: "Nourhan",
@@ -34,6 +35,7 @@ const sections = [
     title: "mohamed abo fool",
     text: "Explore the treasures of Egypt housed in world-famous museums, preserving thousands of years of awe-inspiring art, relics, and mysteries.",
     images: ["about/abofool.jpg"],
+
   },
   {
     title: "Yara Emad Eid Ahmed",

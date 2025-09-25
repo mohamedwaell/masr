@@ -2,14 +2,14 @@ import React from "react";
 
 const TD = ({  photo  }) => {
   const images = [
-    "/monumentslider/1.webp",
-    "/monumentslider/2.webp",
-    "/monumentslider/3.webp",
-    "/monumentslider/10.webp",
-    "/monumentslider/5.webp",
-    "/monumentslider/6.webp",
-    "/monumentslider/7.webp",
-    "/monumentslider/8.webp",
+    "/monumentslider/1.jpg",
+    "/monumentslider/2.jpg",
+    "/monumentslider/3.jpg",
+    "/monumentslider/10.jpg",
+    "/monumentslider/5.jpg",
+    "/monumentslider/6.jpg",
+    "/monumentslider/7.jpg",
+    "/monumentslider/8.jpg",
     
   ];
   return (

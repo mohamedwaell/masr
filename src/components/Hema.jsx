@@ -6,7 +6,7 @@ const HeroVed = () => {
     <section className="relative flex justify-center items-center h-screen mb-[50px]">
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-6 text-white font-bold text-[35px] md:text-[40px] lg:text-[50px] z-10">
         <img
-          src="/herodisc.png"
+          src="/herodisc.webp"
           alt="Hero Disk"
           className="w-[250px] md:w-[400px] lg:w-[550px]"
         />
