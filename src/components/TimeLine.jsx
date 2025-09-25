@@ -14,7 +14,6 @@ const HistoryTimeline = () => {
         {historyData.map((period, index) => (
           <VerticalTimelineElement
             key={index}
-            date={period.date}
             // iconStyle={{ background: "#c084fc", color: "#fff", }}
             contentStyle={{
               background: "#f5f3ff",
@@ -22,29 +21,33 @@ const HistoryTimeline = () => {
               display: "flex",
               flexDirection: "row",
               alignItems: "center",
+              justifyContent: "center",
             }}
-            iconClassName="text-white bg-[#000]  "
+            iconClassName="text-white bg-[#000]   "
             contentArrowStyle={{ borderRight: "7px solid #fff" }}
-            id="auto-show"
-            dateClassName="text-gray-200 font-bold text-[30px] md:text-[50px]"
-            className="hover:scale-105 transition duration-300 ease-in-out"
+            // dateClassName="text-blue-500 font-bold text-lg md:text-4xl  "
+            className="hover:scale-105 transition duration-300 ease-in-out "
           >
-            <img
-              src={period.images[0]}
-              alt={period.title}
-              className="w-30 h-30 object-cover rounded"
-            />
-            <div className="ml-4 flex flex-col align-center text-center">
-              <h3 className="text-xl font-bold line-clamp-2">{period.title}</h3>
-              <p className="text-sm mt-2 line-clamp-2">
-                {period.shortDescription}
-              </p>
-              <Link
-                to={`/history/${period.id}`}
-                className="mt-2 inline-block px-4 py-2 bg-[#000] text-white rounded hover:bg-[#0f0f0f]  transition duration-500 ease-in-out"
-              >
-                Read More
-              </Link>
+            <div className="flex flex-col md:flex-row items-center">
+              <img
+                src={period.images[0]}
+                alt={period.title}
+                className="w-[100px] h-[100px] md:w-[150px] md:h-[150px] object-cover rounded"
+              />
+              <div className="ml-4 flex flex-col align-center text-center">
+                <h3 className="text-xl font-bold line-clamp-2">
+                  {period.title}
+                </h3>
+                <p className="text-sm mt-2 line-clamp-2">
+                  {period.shortDescription}
+                </p>
+                <Link
+                  to={`/history/${period.id}`}
+                  className="mt-2 inline-block px-4 py-2 bg-[#000] text-white rounded hover:bg-[#0f0f0f]  transition duration-500 ease-in-out"
+                >
+                  Read More
+                </Link>
+              </div>
             </div>
           </VerticalTimelineElement>
         ))}

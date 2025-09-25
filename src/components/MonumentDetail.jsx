@@ -22,7 +22,9 @@ const MonumentDetail = () => {
 
   const handlePrevImage = () => {
     setCurrentImageIndex(
-      currentImageIndex === 0 ? monument.images.length - 1 : currentImageIndex - 1
+      currentImageIndex === 0
+        ? monument.images.length - 1
+        : currentImageIndex - 1
     );
   };
 
@@ -31,12 +33,19 @@ const MonumentDetail = () => {
       <Navbar />
       <div className="p-6 mt-[10vh] max-w-4xl mx-auto text-center">
         <div className="flex flex-col items-center gap-4 md:gap-8 bg-[#3d2a55] rounded-3xl p-8 shadow-xl mb-10 ">
-        <h1 className="text-3xl font-bold text-[#ffcc70]"> 🏺{monument.name}</h1>
-        <p className="text-black text-xl font-bold mb-2"> 📌{monument.location}</p>
-        <p className="text-lg text-white mb-4 ">{monument.fullDescription}</p>
-
+          <h1 className="text-3xl font-bold text-[#ffcc70]">
+            {" "}
+            🏺{monument.name}
+          </h1>
+          <p className="text-black text-xl font-bold mb-2">
+            {" "}
+            📌{monument.location}
+          </p>
+          <p className="text-sm md:text-lg text-white mb-4 ">
+            {monument.fullDescription}
+          </p>
         </div>
-       
+
         <div className="relative">
           <img
             src={monument.images[currentImageIndex]}
@@ -77,7 +86,6 @@ const MonumentDetail = () => {
         </Link>
       </div>
       <Footer />
-
     </div>
   );
 };

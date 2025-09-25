@@ -11,7 +11,7 @@ const HeroVed = () => {
           className="w-[250px] md:w-[400px] lg:w-[550px]"
         />
         <Link to="/history">
-          <button className="shake bg-[#8b5e3c] text-white text-[20px] px-[34px] py-[14px] border-2 border-[#d4a64d] rounded-full cursor-pointer font-bold transition duration-300 ease-in-out shadow-[0_0_10px_rgba(212,166,77,0.4)] relative hover:scale-105">
+          <button className="shake bg-[#8b5e3c] text-white text-lg px-6 py-2 border-2 border-[#d4a64d] rounded-full cursor-pointer font-bold transition duration-300 ease-in-out shadow-[0_0_10px_rgba(212,166,77,0.4)] relative hover:scale-105">
             Go to History
           </button>
         </Link>

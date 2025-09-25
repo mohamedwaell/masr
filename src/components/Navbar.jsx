@@ -5,7 +5,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 function Navbar() {
   const [navOpen, setNavOpen] = useState(false);
   const [scroll, setScroll] = useState(false);
-  const location = useLocation(); 
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,19 +50,19 @@ function Navbar() {
           ))}
         </div>
         <button
-          className="lg:hidden text-white cursor-pointer"
+          className="lg:hidden text-white cursor-pointer z-50"
           onClick={() => setNavOpen(!navOpen)}
         >
           <i className={`fas ${navOpen ? "fa-times" : "fa-bars"}`}></i>
         </button>
       </div>
       {navOpen && (
-        <div className="lg:hidden backdrop-blur-lg text-white space-y-4 p-6 absolute top-16 left-0 w-full">
+        <div className=" absolute top-0 h-[100vh] right-0 w-1/2 flex flex-col items-center justify-start pt-20 px-4 gap-4 backdrop-blur-xl text-white ">
           {navLinks.map((item) => (
             <Link
               key={item.id}
               to={item.path}
-              className={`block text-center transition ${
+              className={`block text-center transition w-full text-start text-2xl ${
                 location.pathname === item.path
                   ? "text-yellow-400 font-semibold"
                   : "text-white hover:text-yellow-400"

@@ -14,7 +14,7 @@ const MuseumDetail = () => {
   const { id } = useParams();
   const monument = monumentsData.find((m) => m.id === id);
 
-  if (!monument) { 
+  if (!monument) {
     return <div className="p-6 text-center">Museum not found.</div>;
   }
 
@@ -23,24 +23,31 @@ const MuseumDetail = () => {
       <Navbar />
       <div className="p-6 pt-[10vh] max-w-4xl mx-auto text-center card">
         <div className=" my-[50px] bg-[#200e03] p-[30px] rounded-[15px] shadow-[0_0_30px_rgba(218,165,32,0.4)] transition-all duration-[2000ms] ease-in-out ">
-         
           <div className="flex-1 text-center">
-            <h1 className="text-3xl font-bold text-[#ffd700] border-b-2 border-dashed border-[goldenrod] pb-5">🏺{monument.name}</h1>
-            <p className="text-gray-500 mb-2 text-xl font-bold"> 📌{monument.location}</p>
-            <p className="text-lg text-gray-100 mb-4">{monument.fullDescription}</p>
+            <h1 className="text-3xl font-bold text-[#ffd700] border-b-2 border-dashed border-[goldenrod] pb-5">
+              🏺{monument.name}
+            </h1>
+            <p className="text-gray-500 mb-2 text-xl font-bold">
+              {" "}
+              📌{monument.location}
+            </p>
+            <p className="text-sm md:text-lg text-gray-100 mb-4">
+              {monument.fullDescription}
+            </p>
           </div>
         </div>
 
-        <div className="mt-10"> 
-          <h2 className="text-2xl text-white font-semibold mb-4">Inside the Museum</h2>
+        <div className="mt-10">
+          <h2 className="text-2xl text-white font-semibold mb-4">
+            Inside the Museum
+          </h2>
           <Swiper
-           modules={[Navigation, Pagination, Autoplay]}
-           spaceBetween={20}
-           slidesPerView={1}
-           navigation
-           pagination={{ clickable: true }}
-           autoplay={{ delay: 4000, disableOnInteraction: false }}
-
+            modules={[Navigation, Pagination, Autoplay]}
+            spaceBetween={20}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            autoplay={{ delay: 4000, disableOnInteraction: false }}
             className="rounded-xl  relative"
           >
             {monument.items.map((item, index) => (
@@ -52,9 +59,10 @@ const MuseumDetail = () => {
                     className="w-full  h-[70vh] object-contain rounded-xl mb-10"
                   />
                   <div className="absolute inset-0 flex flex-col justify-end p-10    rounded-2xl">
-                  <h3 className="text-xl text-white font-bold">{item.title}</h3>
+                    <h3 className="text-xl text-white font-bold">
+                      {item.title}
+                    </h3>
                   </div>
-                  
                 </div>
               </SwiperSlide>
             ))}

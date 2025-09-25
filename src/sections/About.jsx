@@ -10,14 +10,11 @@ import "swiper/css/pagination";
 const sections = [
   {
     title: "Hema Hemdan",
-    text:
-      "Stand before awe-inspiring monuments like the Pyramids of Giza and the Sphinx — masterpieces of engineering and mystery that defy time.",
+    text: "that's me 😊",
     images: [
       "/about/hema2.jpg",
       "/about/hema1.jpg",
-      "/about/hema3.jpg",
       "/about/hema4.jpg",
-      "/about/hema5.jpg",
       "/about/hema6.jpg",
       "/about/hema7.jpg",
       "/about/hema8.jpg",
@@ -25,30 +22,25 @@ const sections = [
   },
   {
     title: "Mohamed Wael",
-    text:
-      "Hi, I'm Mohamed Wael Ellakany, a computer science student at Damanhur University, living in Damanhour. I have a strong passion for technology, with skills in front-end web development and C++. I'm always eager to learn new technologies and build creative, user-friendly projects.",
-    images: [
-      "/about/mo wael.webp",
-      "/about/mowael2.jpg",
-    ],
+=    text: "Hi, I'm Mohamed Wael Ellakany, a computer science student at Damanhur University, living in Damanhour. I have a strong passion for technology, with skills in front-end web development and C++. I'm always eager to learn new technologies and build creative, user-friendly projects.",
+    images: ["/about/mo wael.jpg", "/about/mowael2.jpg"],
+
   },
   {
     title: "Nourhan",
-    text:
-      "Meet the divine rulers of Ancient Egypt — from the mighty Ramses II to the mysterious Tutankhamun. Legends that shaped civilization.",
+    text: "Meet the divine rulers of Ancient Egypt — from the mighty Ramses II to the mysterious Tutankhamun. Legends that shaped civilization.",
     images: ["about/noor.jpg"],
   },
   {
     title: "mohamed abo fool",
-    text:
-      "Explore the treasures of Egypt housed in world-famous museums, preserving thousands of years of awe-inspiring art, relics, and mysteries.",
-    images: ["about/abofool.webp"],
+    text: "Explore the treasures of Egypt housed in world-famous museums, preserving thousands of years of awe-inspiring art, relics, and mysteries.",
+    images: ["about/abofool.jpg"],
+
   },
   {
     title: "Yara Emad Eid Ahmed",
-    text:
-      "Explore the treasures of Egypt housed in world-famous museums, preserving thousands of years of awe-inspiring art, relics, and mysteries.",
-    images: [ "/heroSlider/4.jpg"],
+    text: "Explore the treasures of Egypt housed in world-famous museums, preserving thousands of years of awe-inspiring art, relics, and mysteries.",
+    images: ["/heroSlider/4.jpg"],
   },
 ];
 
@@ -93,9 +85,10 @@ const About = () => {
             w-full sm:w-[48%] md:w-[40%] lg:w-[45%] justify-between 
             shadow-[0_0_30px_rgba(180,100,255,0.4)] transition-transform duration-300 
             hover:-translate-y-2 mb-6 "
-
             >
-              <h2 className="text-3xl font-bold mb-4 text-[#fcd34d]">{section.title}</h2>
+              <h2 className="text-3xl font-bold mb-4 text-[#fcd34d]">
+                {section.title}
+              </h2>
               <p className="text-white text-base">{section.text}</p>
 
               <Swiper
@@ -118,8 +111,6 @@ const About = () => {
                   </SwiperSlide>
                 ))}
               </Swiper>
-              
-              
             </div>
           ))}
         </div>
@@ -131,4 +122,3 @@ const About = () => {
 };
 
 export default About;
-

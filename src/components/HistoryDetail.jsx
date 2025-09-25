@@ -12,19 +12,27 @@ const HistoryDetail = () => {
   if (!period) return <div className="p-6 text-center">Period not found.</div>;
 
   const handlePrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? period.images.length - 1 : prev - 1));
+    setCurrentIndex((prev) =>
+      prev === 0 ? period.images.length - 1 : prev - 1
+    );
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev === period.images.length - 1 ? 0 : prev + 1));
+    setCurrentIndex((prev) =>
+      prev === period.images.length - 1 ? 0 : prev + 1
+    );
   };
 
   return (
     <div className="bg-[0f0f0f] w-[100%]  bg-cover bg-center bg-no-repeat bg-fixed pt-[10vh]">
       <Navbar />
       <div className="p-6 max-w-4xl mx-auto  text-center bg-[#f3e2c7] border-2 border-black p-8 shadow-xl mb-10">
-        <h1 className="text-3xl font-bold text-[#000] border-b-2 border-[#000] pb-5">🏺{period.title}</h1>
-        <p className="text-lg mt-2 text-[#000] border-b-2 border-dashed border-[#000] pb-5">{period.fullDescription}</p>
+        <h1 className="text-3xl font-bold text-[#000] border-b-2 border-[#000] pb-5">
+          🏺{period.title}
+        </h1>
+        <p className="text-sm md:text-lg mt-2 text-[#000] border-b-2 border-dashed border-[#000] pb-5">
+          {period.fullDescription}
+        </p>
 
         <div className="relative mt-6 flex justify-center items-center">
           {/* <button
