@@ -32,7 +32,7 @@ function Navbar() {
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center p-4 text-2xl">
         <Link to="/" className="text-2xl font-bold text-yellow-500">
-          <img src="/logo.png" alt="Logo" className="logo" />
+          <img src="/logo.webp" alt="Logo" className="logo" />
         </Link>
         <div className="hidden lg:flex space-x-6">
           {navLinks.map((item) => (
