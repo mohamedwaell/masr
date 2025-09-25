@@ -14,9 +14,7 @@ const sections = [
     images: [
       "/about/hema2.jpg",
       "/about/hema1.jpg",
-      "/about/hema3.jpg",
       "/about/hema4.jpg",
-      "/about/hema5.jpg",
       "/about/hema6.jpg",
       "/about/hema7.jpg",
       "/about/hema8.jpg",
