@@ -7,7 +7,7 @@ import Loading from "../components/Loading";
 const Museums = () => {
   return (
     <section className=" bg-[url('/musum/hero.jpg')] w-[100%]  bg-cover bg-center bg-no-repeat bg-fixed">
-      <Loading />
+      {/* <Loading /> */}
       <Navbar />
       <MVed />
       <MuseumsSection />
